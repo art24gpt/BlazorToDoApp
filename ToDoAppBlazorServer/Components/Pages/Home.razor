@@ -1,0 +1,48 @@
+﻿@page "/"
+@using ToDoAppBlazorServer.Models
+@using ToDoAppBlazorServer.Services;
+@inject ITodoService _todoService;
+@rendermode InteractiveServer
+
+<PageTitle>Todo List</PageTitle>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <h1 class="title">Todo List</h1>
+
+    <!-- INPUT -->
+    <div class="add-box">
+        <TodoItemForm OnItemAdded="ItemsChanged" />
+    </div>
+
+    <!-- TODO LIST -->
+    <div class="todo-list">
+        @foreach (var todo in Todos)
+        {
+            <div class="todo-item">
+                
+                <div class="left"
+                     @onclick="@(() => ToggleItem(todo))">
+
+                    <div class="checkbox @(todo.Completed ? "checked" : "")">
+                        @if (todo.Completed)
+                        {
+                            <i class="bi bi-check"></i>
+                        }
+                    </div>
+
+                    <div class="text @ItemClass(todo)">
+                        @todo.Text
+                    </div>
+                </div>
+
+                <button class="delete-btn"
+                        @onclick="@(() => DeleteItem(todo))">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </div>
+        }
+    </div>
+
+</div>

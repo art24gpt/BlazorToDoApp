@@ -1,0 +1,14 @@
+﻿@using ToDoAppBlazorServer.Models
+@using ToDoAppBlazorServer.Services;
+@inject ITodoService _todoService;
+
+<div class="add-row">
+    <input @bind="NewItem.Text"
+           placeholder="Add New Todo"
+           class="add-input" />
+
+    <button class="add-btn"
+            @onclick="ItemAdded">
+        Add
+    </button>
+</div>

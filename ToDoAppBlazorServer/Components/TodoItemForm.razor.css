@@ -1,0 +1,30 @@
+﻿.add-row {
+    display: flex;
+    gap: 10px;
+}
+
+.add-input {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+    .add-input:focus {
+        outline: none !important;
+    }
+    .add-input:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 0 2px rgba(74,163,192,0.2);
+    }
+
+.add-btn {
+    background: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+    .add-btn:hover {
+        transform: scale(1.01);
+    }

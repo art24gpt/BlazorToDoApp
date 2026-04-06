@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ToDoAppBlazorServer.Tests/ToDoAppBlazorServer.Tests.csproj" Id="1cfb9c16-a6c7-4ea2-b40c-0228316880cb" />
+  <Project Path="ToDoAppBlazorServer/ToDoAppBlazorServer.csproj" />
+</Solution>

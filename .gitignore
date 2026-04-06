@@ -1,0 +1,64 @@
+# Build
+bin/
+obj/
+
+# User-specific
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Blazor / static files (build output)
+wwwroot/dist/
+wwwroot/build/
+
+# Publish output
+publish/
+*.Publish.xml
+
+# Azure
+*.azurePubxml
+
+# Secrets
+appsettings.Development.json
+secrets.json
+
+# Node (jakbyś kiedyś użył)
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
