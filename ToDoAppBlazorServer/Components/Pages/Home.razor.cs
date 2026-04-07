@@ -12,11 +12,6 @@ namespace ToDoAppBlazorServer.Components.Pages
             Todos = _todoService.GetAll().ToList();
         }
 
-        public string ItemClass(TodoItem item)
-        {
-            return item.Completed ? "item-completed" : "";
-        }
-
         public void ItemsChanged()
         {
             Todos = _todoService.GetAll().ToList();

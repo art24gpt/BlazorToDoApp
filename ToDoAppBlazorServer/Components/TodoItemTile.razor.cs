@@ -15,6 +15,6 @@ namespace ToDoAppBlazorServer.Components
         public EventCallback<TodoItem> DeleteItem { get; set; }
 
         private string ItemClass(TodoItem item)
-            => item.Completed ? "completed" : "";
+            => item.Completed ? "item-completed" : "";
     }
 }
