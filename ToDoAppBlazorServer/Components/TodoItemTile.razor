@@ -1,0 +1,23 @@
+﻿@using ToDoAppBlazorServer.Models
+
+<div class="todo-item">
+    <div class="left"
+         @onclick="() => ToggleItem.InvokeAsync(TodoItem)">
+
+        <div class="checkbox @(TodoItem.Completed ? "checked" : "")">
+            @if (TodoItem.Completed)
+            {
+                <i class="bi bi-check"></i>
+            }
+        </div>
+
+        <div class="text @ItemClass(TodoItem)">
+            @TodoItem.Text
+        </div>
+    </div>
+
+    <button class="delete-btn"
+            @onclick="() => DeleteItem.InvokeAsync(TodoItem)">
+        <i class="bi bi-trash"></i>
+    </button>
+</div>
