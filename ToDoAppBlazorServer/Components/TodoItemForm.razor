@@ -2,13 +2,18 @@
 @using ToDoAppBlazorServer.Services;
 @inject ITodoService _todoService;
 
-<div class="add-row">
-    <input @bind="NewItem.Text"
-           placeholder="Add New Todo"
-           class="add-input" />
+<EditForm Model="NewItem" OnValidSubmit="ItemAdded">
+    <DataAnnotationsValidator />
 
-    <button class="add-btn"
-            @onclick="ItemAdded">
-        Add
-    </button>
-</div>
+    <div class="add-row">
+        <InputText @bind-Value="NewItem.Text"
+                   class="add-input"
+                   placeholder="Add New Todo" />
+
+        <button type="submit" class="add-btn">
+            Add
+        </button>
+    </div>
+
+    <ValidationMessage For="@(() => NewItem.Text)" />
+</EditForm>

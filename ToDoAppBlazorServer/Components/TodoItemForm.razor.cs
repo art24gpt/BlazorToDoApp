@@ -10,16 +10,13 @@ namespace ToDoAppBlazorServer.Components
 
         private TodoItem NewItem = new TodoItem(string.Empty);
 
-        public void ItemAdded()
+        public async Task ItemAdded()
         {
-            if (!string.IsNullOrWhiteSpace(NewItem.Text))
-            {
-                _todoService.Add(new TodoItem(NewItem.Text));
-            }
+            _todoService.Add(new TodoItem(NewItem.Text));
 
             NewItem = new TodoItem(string.Empty);
 
-            OnItemAdded.InvokeAsync();
+            await OnItemAdded.InvokeAsync();
         }
     }
 }

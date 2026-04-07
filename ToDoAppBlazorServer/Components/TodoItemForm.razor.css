@@ -3,13 +3,12 @@
     gap: 10px;
 }
 
-.add-input {
+::deep input.add-input {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
 }
-
-    .add-input:focus {
+    ::deep input.add-input:focus {
         outline: none;
         border-color: #3498db;
         box-shadow: 0 0 0 2px rgba(74,163,192,0.2);
